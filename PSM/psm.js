@@ -81,6 +81,7 @@ function handleLines(array, category1, category2) {
 
 //交点を求める
 function getIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
+  //分母が０の時はnullを返す
   const xDenominator = (y1 - y2) * (x3 - x4) - (x1 - x2) * (y3 - y4);
   const yDenominator = x1 - x2;
   if (xDenominator === 0 || yDenominator === 0) return null;
